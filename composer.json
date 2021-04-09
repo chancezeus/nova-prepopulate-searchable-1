@@ -19,16 +19,9 @@
             "role": "Original Creator"
         }
     ],
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://nova.laravel.com"
-        }
-    ],
     "require": {
-        "php": "^7.3|^8.0",
-        "laravel/nova": "^3.9",
-        "illuminate/support": "^8.0"
+        "php": ">=7.1.0",
+        "laravel/nova": "*"
     },
     "autoload": {
         "psr-4": {
@@ -38,7 +31,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "GeneaLabs\\NovaPrepopulateSearchable\\ToolServiceProvider"
+                "GeneaLabs\\NovaPrepopulateSearchable\\FieldServiceProvider"
             ]
         }
     },

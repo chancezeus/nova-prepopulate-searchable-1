@@ -7,7 +7,7 @@ use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Nova;
 
-class ToolServiceProvider extends ServiceProvider
+class FieldServiceProvider extends ServiceProvider
 {
     public function boot() : void
     {
@@ -21,7 +21,7 @@ class ToolServiceProvider extends ServiceProvider
 
             Nova::script(
                 'nova-prepopulate-searchable',
-                __DIR__ . '/../dist/js/tool.js'
+                __DIR__ . '/../dist/js/field.js'
             );
         });
     }
