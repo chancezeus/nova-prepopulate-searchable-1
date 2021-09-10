@@ -4,15 +4,15 @@ namespace GeneaLabs\NovaPrepopulateSearchable;
 
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;
-use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Nova;
 
 class FieldServiceProvider extends ServiceProvider
 {
-    public function boot() : void
+    public function boot(): void
     {
         Nova::serving(function (ServingNova $event) {
-            BelongsTo::macro('prepopulate', function ($query = null) {
+            Field::macro('prepopulate', function ($query = null) {
                 $this->meta['prepopulate'] = true;
                 $this->meta['prepopulate_query'] = $query;
 
